@@ -27,6 +27,7 @@ public class SwipeableVertical extends BaseScreenADV{
         int yto = (int) (rect.getY() + rect.getHeight()*1);
 
 
+
         TouchAction<?>touchAction = new TouchAction<>(driver);
         touchAction.longPress(PointOption.point(yfrom,x))
                 .moveTo(PointOption.point(yfrom,yto))
