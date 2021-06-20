@@ -20,9 +20,7 @@ public class SwipeTests extends ConfigAdvancedPages {
     public void verticalSwipe() {
         new DragScreen(driver)
                 .gotoSwipe()
-        .gotoSwipeVertical()
-                .swipeUp()
-        .swipeDown();
+        .gotoSwipeVertical().swipeDown().swipeUp();
     }
 }
 

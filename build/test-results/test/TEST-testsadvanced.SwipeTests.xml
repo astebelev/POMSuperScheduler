@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="testsadvanced.SwipeTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-06-18T15:01:22" hostname="DESKTOP-832BH2N" time="4.401">
+<testsuite name="testsadvanced.SwipeTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-06-20T15:41:18" hostname="DESKTOP-832BH2N" time="8.121">
   <properties/>
-  <testcase name="verticalSwipe" classname="testsadvanced.SwipeTests" time="4.401"/>
+  <testcase name="verticalSwipe" classname="testsadvanced.SwipeTests" time="8.121"/>
   <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[Jun 18, 2021 6:01:22 PM io.appium.java_client.remote.AppiumCommandExecutor$1 lambda$0
+  <system-err><![CDATA[Jun 20, 2021 6:41:18 PM io.appium.java_client.remote.AppiumCommandExecutor$1 lambda$0
 INFO: Detected dialect: W3C
 ]]></system-err>
 </testsuite>

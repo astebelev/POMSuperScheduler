@@ -22,31 +22,46 @@ public class SwipeableVertical extends BaseScreenADV{
         Rectangle rect = el.getRect();
 
 
-        int yfrom = (int) (rect.getY()*0.8);
+        /*int yfrom = (int) (rect.getY()*0.8);
         int x = rect.getX() + rect.getWidth()/2;
-        int yto = (int) (rect.getY() + rect.getHeight()*1);
-
+        int yto = (int) (rect.getY() + rect.getHeight()*1);*/
+        int x = rect.getX() + rect.getWidth()/2;
+        int yfrom = rect.getY() + 20;
+        int yto = rect.getY() + rect.getHeight() -20;
 
 
         TouchAction<?>touchAction = new TouchAction<>(driver);
-        touchAction.longPress(PointOption.point(yfrom,x))
-                .moveTo(PointOption.point(yfrom,yto))
+        touchAction.longPress(PointOption.point(x,yfrom))
+                .moveTo(PointOption.point(x,yto))
                 .release().perform();
 
         return this;
     }
     public SwipeableVertical swipeUp(){
-        MobileElement el = list.get(1);
+        MobileElement el = list.get(3);
+
+        Rectangle rect = el.getRect();
+        int x = rect.getX() + rect.getWidth()/2;
+        int yfrom = rect.getY() + rect.getHeight() -100;
+        int yto = rect.getY() + 20;
+
+
+        TouchAction<?>touchAction = new TouchAction<>(driver);
+        touchAction.longPress(PointOption.point(x,yfrom))
+                .moveTo(PointOption.point(x,yto))
+                .release().perform();
+        /*MobileElement el = list.get(1);
         Rectangle rect = el.getRect();
 
         int yfrom = (int) (rect.getY()*1.8);
         int x = rect.getX() + rect.getWidth()/2;
-        int yto = (int) (rect.getY()/4);
+        int yto = (int) (rect.getY()/4);*/
 
-        TouchAction<?>touchAction = new TouchAction<>(driver);
+
+        /*TouchAction<?>touchAction = new TouchAction<>(driver);
         touchAction.longPress(PointOption.point(yfrom,x))
                 .moveTo(PointOption.point(yfrom,yto))
-                .release().perform();
+                .release().perform();*/
 
         return this;
     }
