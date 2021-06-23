@@ -22,25 +22,26 @@ public class DraggableBasic extends BaseScreenADV {
     public DraggableBasic dragDown() {
         MobileElement el = list.get(0);
         Rectangle rect = el.getRect();
-        int x = rect.getX()+ rect.getWidth()/2;
-        int y = rect.getY()+ rect.getHeight()/2;
+        int x = rect.getX() + rect.getWidth()/2;
+        int y = rect.getY() + rect.getHeight()/2;
         Dimension window = driver.manage().window().getSize();
         TouchAction<?> touchAction = new TouchAction<>(driver);
-            touchAction.longPress(PointOption.point(x,y)).moveTo(PointOption.point(x, window.getHeight()- rect.getHeight()/2))
+            touchAction.longPress(PointOption.point(x,y))
+                    .moveTo(PointOption.point(x, window.getHeight()-rect.getHeight()/2))
                     .release()
                     .perform();
 
-
         return this;
     }
-    public DraggableBasic dragDown() {
+    public DraggableBasic dragDownCount(int count) {
         MobileElement el = list.get(0);
         Rectangle rect = el.getRect();
         int x = rect.getX()+ rect.getWidth()/2;
         int y = rect.getY()+ rect.getHeight()/2;
         Dimension window = driver.manage().window().getSize();
         TouchAction<?> touchAction = new TouchAction<>(driver);
-        touchAction.longPress(PointOption.point(x,y)).moveTo(PointOption.point(x, window.getHeight()- rect.getHeight()/2))
+        touchAction.longPress(PointOption.point(x,y))
+                .moveTo(PointOption.point(x, rect.getHeight()*count))
                 .release()
                 .perform();
 
